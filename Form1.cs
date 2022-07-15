@@ -9,7 +9,9 @@ namespace ssn_validator
 
     private void btnValidate_Click(object sender, EventArgs e)
     {
+      // Create a person instance.
       Person person = new Person(firstNameInput.Text, lastNameInput.Text, ssnInput.Text);
+      // Display the person's information in the result textbox.
       resultBox.Text = person.ToString();
     }
 
