@@ -32,7 +32,7 @@
       this.firstNameInput = new System.Windows.Forms.TextBox();
       this.lastNameInput = new System.Windows.Forms.TextBox();
       this.ssnInput = new System.Windows.Forms.TextBox();
-      this.boxOutput = new System.Windows.Forms.RichTextBox();
+      this.resultBox = new System.Windows.Forms.RichTextBox();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
       // 
       // btnValidate
       // 
-      this.btnValidate.Location = new System.Drawing.Point(97, 175);
+      this.btnValidate.Location = new System.Drawing.Point(107, 175);
       this.btnValidate.Margin = new System.Windows.Forms.Padding(2);
       this.btnValidate.Name = "btnValidate";
       this.btnValidate.Size = new System.Drawing.Size(94, 37);
@@ -61,7 +61,7 @@
       this.firstNameInput.Location = new System.Drawing.Point(68, 46);
       this.firstNameInput.Margin = new System.Windows.Forms.Padding(2);
       this.firstNameInput.Name = "firstNameInput";
-      this.firstNameInput.Size = new System.Drawing.Size(152, 23);
+      this.firstNameInput.Size = new System.Drawing.Size(172, 23);
       this.firstNameInput.TabIndex = 1;
       // 
       // lastNameInput
@@ -69,7 +69,7 @@
       this.lastNameInput.Location = new System.Drawing.Point(68, 91);
       this.lastNameInput.Margin = new System.Windows.Forms.Padding(2);
       this.lastNameInput.Name = "lastNameInput";
-      this.lastNameInput.Size = new System.Drawing.Size(152, 23);
+      this.lastNameInput.Size = new System.Drawing.Size(172, 23);
       this.lastNameInput.TabIndex = 2;
       // 
       // ssnInput
@@ -77,17 +77,17 @@
       this.ssnInput.Location = new System.Drawing.Point(68, 139);
       this.ssnInput.Margin = new System.Windows.Forms.Padding(2);
       this.ssnInput.Name = "ssnInput";
-      this.ssnInput.Size = new System.Drawing.Size(152, 23);
+      this.ssnInput.Size = new System.Drawing.Size(172, 23);
       this.ssnInput.TabIndex = 3;
       // 
-      // boxOutput
+      // resultBox
       // 
-      this.boxOutput.Location = new System.Drawing.Point(276, 29);
-      this.boxOutput.Margin = new System.Windows.Forms.Padding(2);
-      this.boxOutput.Name = "boxOutput";
-      this.boxOutput.Size = new System.Drawing.Size(230, 211);
-      this.boxOutput.TabIndex = 5;
-      this.boxOutput.Text = "";
+      this.resultBox.Location = new System.Drawing.Point(276, 29);
+      this.resultBox.Margin = new System.Windows.Forms.Padding(2);
+      this.resultBox.Name = "resultBox";
+      this.resultBox.Size = new System.Drawing.Size(230, 211);
+      this.resultBox.TabIndex = 5;
+      this.resultBox.Text = "";
       // 
       // label1
       // 
@@ -115,19 +115,20 @@
       this.label3.Location = new System.Drawing.Point(68, 122);
       this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(127, 15);
+      this.label3.Size = new System.Drawing.Size(162, 15);
       this.label3.TabIndex = 8;
-      this.label3.Text = "Social security number";
+      this.label3.Text = "Social Security Number (SSN)";
       // 
       // btnExit
       // 
-      this.btnExit.Location = new System.Drawing.Point(97, 216);
+      this.btnExit.Location = new System.Drawing.Point(107, 216);
       this.btnExit.Margin = new System.Windows.Forms.Padding(2);
       this.btnExit.Name = "btnExit";
       this.btnExit.Size = new System.Drawing.Size(94, 24);
       this.btnExit.TabIndex = 9;
       this.btnExit.Text = "Exit";
       this.btnExit.UseVisualStyleBackColor = true;
+      this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
       // 
       // menuStrip1
       // 
@@ -154,17 +155,19 @@
       this.menuValidate.Name = "menuValidate";
       this.menuValidate.Size = new System.Drawing.Size(180, 22);
       this.menuValidate.Text = "Validate";
+      this.menuValidate.Click += new System.EventHandler(this.btnValidate_Click);
       // 
       // toolStripSeparator1
       // 
       this.toolStripSeparator1.Name = "toolStripSeparator1";
-      this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+      this.toolStripSeparator1.Size = new System.Drawing.Size(112, 6);
       // 
       // menuExit
       // 
       this.menuExit.Name = "menuExit";
       this.menuExit.Size = new System.Drawing.Size(180, 22);
       this.menuExit.Text = "Exit";
+      this.menuExit.Click += new System.EventHandler(this.btnExit_Click);
       // 
       // Form1
       // 
@@ -175,7 +178,7 @@
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
-      this.Controls.Add(this.boxOutput);
+      this.Controls.Add(this.resultBox);
       this.Controls.Add(this.ssnInput);
       this.Controls.Add(this.lastNameInput);
       this.Controls.Add(this.firstNameInput);
@@ -198,7 +201,7 @@
     private TextBox firstNameInput;
     private TextBox lastNameInput;
     private TextBox ssnInput;
-    private RichTextBox boxOutput;
+    private RichTextBox resultBox;
     private Label label1;
     private Label label2;
     private Label label3;
