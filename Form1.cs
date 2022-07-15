@@ -6,5 +6,10 @@ namespace ssn_validator
     {
       InitializeComponent();
     }
+
+    private void btnValidate_Click(object sender, EventArgs e)
+    {
+      Person person = new Person(firstNameInput.Text, lastNameInput.Text, ssnInput.Text);
+    }
   }
 }
