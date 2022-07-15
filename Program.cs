@@ -1,3 +1,5 @@
+// Author: Gabriel Ellebrink, gabell-2@student.ltu.se, L0002B, Uppgift 3
+
 using System.Text.RegularExpressions;
 
 namespace ssn_validator
