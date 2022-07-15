@@ -85,6 +85,7 @@
       this.resultBox.Location = new System.Drawing.Point(276, 29);
       this.resultBox.Margin = new System.Windows.Forms.Padding(2);
       this.resultBox.Name = "resultBox";
+      this.resultBox.ReadOnly = true;
       this.resultBox.Size = new System.Drawing.Size(230, 211);
       this.resultBox.TabIndex = 5;
       this.resultBox.Text = "";
@@ -153,7 +154,7 @@
       // menuValidate
       // 
       this.menuValidate.Name = "menuValidate";
-      this.menuValidate.Size = new System.Drawing.Size(180, 22);
+      this.menuValidate.Size = new System.Drawing.Size(115, 22);
       this.menuValidate.Text = "Validate";
       this.menuValidate.Click += new System.EventHandler(this.btnValidate_Click);
       // 
@@ -165,7 +166,7 @@
       // menuExit
       // 
       this.menuExit.Name = "menuExit";
-      this.menuExit.Size = new System.Drawing.Size(180, 22);
+      this.menuExit.Size = new System.Drawing.Size(115, 22);
       this.menuExit.Text = "Exit";
       this.menuExit.Click += new System.EventHandler(this.btnExit_Click);
       // 

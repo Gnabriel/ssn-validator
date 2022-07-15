@@ -72,7 +72,7 @@ namespace ssn_validator
       else
       {
         // Invalid SSN.
-        result += "Invalid social security number.\n";
+        result += "Invalid Social Security Number.\n";
       }
       
       return result;
